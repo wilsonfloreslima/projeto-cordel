@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+* {
+    /* configurações globais */
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;  
+    /* 'fonte2' e 'fonte3' = importadas do Google Fonts */
+}
+
+html, body {
+    font-family: var(--fonte1);
+    min-height: 100vh; /* tam min do corpo 100% da viewport-height(altura) */
+    background-color: darkgray;
+    
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+header h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* fontes maiúsculas com estilo */
+    font-family: var(--fonte2);
+    font-size: 8.5vw; /* 8.5% da viewport-width(largura) */
+
+}
+
+header p {
+    padding-bottom: 50px;
+
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+header a:hover, footer a:hover {
+    color: brown;
+    text-decoration: underline;
+
+}
+
+section {
+    /* configurações gerais */
+
+    padding-top: 10vh; /* 10% da viewport no topo */
+    padding-bottom: 10vh; /* 10% da viewport na base */
+    line-height: 2em; /* distância entre linhas */
+    padding-left: 30px; /* distância do texto para a lat esq.*/
+    font-family: var(--fonte3);
+    font-size: 3vw;
+
+}
+
+section p {
+    padding-bottom: 2em;
+
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+
+}
+
+section.imagem {
+    background-color: rgba(0, 0, 0, 0.322);
+    color: white;
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.521); 
+    background-attachment: fixed;
+    /* inset = sombra interna no box */
+    /* As duas sections de imagem possuem um 'background-size: cover', essa configuração pode ser feita aqui uma unica vez tambem, caso prefira */
+    
+
+}
+
+section.imagem p {
+    display: inline-block; /* box q se adapta ao conteudo */
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.534);
+    text-shadow: 1px 1px 0px black;
+
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /* alinhado no centro a direita */
+    background-size: cover;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+    background-size: cover;
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+}
